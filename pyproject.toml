@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "AsciiRacerRL"
+version = "0.1.0"
+description = ""
+authors = ["WillyKess <williamhtkessner@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.11"
+asciiracer = {path = "ascii_racer"}
+bpython = "^0.22.1"
+numpy = "^1.22.4"
+gym = "^0.24.1"
+stable-baselines = "^2.10.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
