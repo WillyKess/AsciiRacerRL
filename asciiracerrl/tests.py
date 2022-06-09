@@ -3,9 +3,9 @@ from __future__ import absolute_import
 import pprint
 from queue import Queue
 import threading
-# import runpy
 from time import sleep
 from asciiracer.game import run
+# import runpy
 # from ascii_racer.asciiracer.game import run
 # import ascii_racer.asciiracer as ar
 # import sys

@@ -9,8 +9,7 @@ python = ">=3.10, <3.11"
 asciiracer = {path = "ascii_racer"}
 bpython = "^0.22.1"
 numpy = "^1.22.4"
-gym = "^0.24.1"
-stable-baselines = "^2.10.2"
+stable-baselines3 = "^1.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
