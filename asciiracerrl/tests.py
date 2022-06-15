@@ -5,6 +5,7 @@ from queue import Queue
 import threading
 from time import sleep
 from asciiracer.game import run
+
 # import runpy
 # from ascii_racer.asciiracer.game import run
 # import ascii_racer.asciiracer as ar
@@ -13,26 +14,28 @@ from asciiracer.game import run
 # ar_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 #              + '/ascii_racer/asciiracer')
 # sys.path.append(ar_dir)
-statequeue: Queue[dict] = Queue()
-keyqueue = Queue()
+# statequeue: Queue[dict] = Queue()
+# keyqueue = Queue()
 
 
-# def rungame():
-#     run(squeue=statequeue, kqueue=keyqueue)
+# # def rungame():
+# #     run(squeue=statequeue, kqueue=keyqueue)
 
 
-thread = threading.Thread(target=lambda: run(
-    squeue=statequeue, kqueue=keyqueue), daemon=True)
-thread.start()
-sleep(2)
-a = open("log.txt", "w")
-print(statequeue.get())
+# thread = threading.Thread(target=lambda: run(
+#     squeue=statequeue, kqueue=keyqueue), daemon=True)
+# thread.start()
 # sleep(2)
-a.write(pprint.pformat(statequeue.get()))
-a.flush()
-sleep(2)
-print(statequeue.get())
-sleep(0.5)
-# a.write(str(statequeue.get()))
-keyqueue.put(ord('q'))
-a.close()
+# a = open("log.txt", "w")
+# print(statequeue.get())
+# # sleep(2)
+# a.write(pprint.pformat(statequeue.get()))
+# a.flush()
+# sleep(2)
+# print(statequeue.get())
+# sleep(0.5)
+# # a.write(str(statequeue.get()))
+# keyqueue.put(ord('q'))
+# a.close()
+thread = threading.Thread(target=lambda: run(squeue=Queue(), kqueue=Queue(), qqueue=Queue()), daemon=False)
+thread.start()
